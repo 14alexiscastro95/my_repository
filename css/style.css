@@ -1,0 +1,200 @@
+body{
+	background-image: url(../img/fondo3.jpeg);
+	/*tamaño portada*/
+	padding: 0;
+	margin: 0;
+}
+nav	{
+		/*Color portada*/
+	background-color: #C74EC6;
+	padding: 6px 20px;
+}
+
+h1{
+	color: blueviolet;
+}
+h2{
+	color: darkblue;
+}
+h3{
+	color:  deeppink;
+	font-size: 1.5rem;
+}
+/*tamaño del logo*/
+.cambio{
+	width: 10%;
+}
+
+h1{
+	font-family: 'Raleway', sans-serif;
+}
+
+nav ul {
+	list-style-type: none;
+	display: inline-block; /* accesos */
+}
+
+nav ul li {
+	color: greenyellow;
+	display: inline-block;
+	margin-right: 10px;/* separacion de accesos */
+}
+
+nav ul li a {
+	color: greenyellow;
+}
+
+article p{
+ 	font-family: 'League Gothic', sans-serif;  /*( esto es que cargo extra para mostrar) */
+ 	font-size: 25px;
+ 	line-height: 20px;
+ 	font-weight: 400;
+}
+
+.text-grey{
+	color: grey;
+}
+
+.text-center{
+	text-align: center;
+}
+
+.text-right{
+	text-align: right;
+}
+
+.text-left{
+	text-align: left;
+}
+
+.bg-green{
+	background-color: green;
+}
+
+.bg-light{
+	background-color: black;
+
+}
+/*box model - width - height - padding - margin - border - overflow*/
+.promociones_config{
+	width: 90%;
+	height: 150px;
+	padding: 10px;
+	margin: 50px auto;
+	border: solid	darkred 1px;
+	overflow: auto;
+}
+/*configuracion header*/
+.encabezado__img--fluid{
+	width: 100%;
+}
+
+
+/*configuración de iconos redes*/
+.redes{
+	text-align: right;
+	padding: 10px 0;
+}
+/* tamaño iconos de redes */
+.icon_redes{
+	width: 30px;
+}
+
+.tamañoImagen{
+	width: 40%;
+}
+
+/*____________Noticias____________________
+.contenedor{
+
+}
+#mainNav{
+
+}
+#header{
+
+}
+#filtros{
+
+}
+#productor{
+
+}
+#aside{
+	
+}
+*/
+/*flexbox*/
+.conteinerdesplable{
+	display: flex;
+	overflow: auto;
+	scroll-snap-type: x mandatory;
+}
+.conteinerdesplable > .item{
+	min-width: auto;
+	scroll-snap-align: start;
+}
+
+/*configuración grid*/
+.cards{
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+	gap: 20px;
+}
+
+
+.cardN{
+	height: 300px;
+	width: 450px;
+	border-radius: 1px;
+
+	display: grid;
+	
+	grid-template-areas: "main" ;
+    place-items: center;
+	overflow: hidden;
+	cursor: pointer;
+	text-decoration: none;
+}
+
+.cardN > * {
+	grid-area: main;
+}
+
+.cardN > .image {
+	width: 100%;
+	object-fit: cover; 
+
+	transition: transform 400ms, filter 400ms;
+}
+ .cardN > .text {
+ 	opacity: 0;
+ 	color: white;
+ 	font-size: 1.8em;
+ 	transition: opacity 400ms, transform 400ms;
+ }
+.cardN:is( :hover, :focus) > .image {
+	transform: scale(1.1);
+	filter: brightness(0.4);
+}
+.cardN:is( :hover, :focus) > .text {
+	transform: scale(1,2);
+	opacity: 1;
+}
+
+/* animacion header
+
+button{
+	margin-left:50px;
+	border: none;
+	width: 100px;
+	height: 25px;
+	background: linear-gradient(to top, pink, violet);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 4px;
+	color: black;
+	border-radius: 4px;
+	transition: all 2s
+}
